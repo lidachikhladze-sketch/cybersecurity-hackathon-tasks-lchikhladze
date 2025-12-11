@@ -2,38 +2,38 @@
 
 ## Challenge
 
-A hidden Base64 string was embedded inside an image.  
-The goal was to decode it and identify the password.
+> A hidden Base64 string is embedded in an image.  
+> Decode it and identify the password.
 
-### Base64 Payload
+We are given a Base64-encoded string extracted from the image:
 
+```text
+cGFzc3dvcmQ6MTIzNDU2Nzg5MA==
 
-## Approach
+Approach
 
-1. Extract the Base64 text from the image (already provided in the assignment).
-2. Decode the Base64 string.
-3. Read the plaintext output to identify the password.
+Extract the Base64 payload from the image (this step was provided in the assignment).
 
-### 🔧 Tools used
+Decode the Base64 string.
 
-- CyberChef (online Base64 decoder)
-- Python script (`decode_base64.py`)
+Identify the password contained in the decoded text.
 
-### Decoding with CyberChef
+I used CyberChef (online tool) to decode the string, as well as a simple Python script included in this folder.
 
-Steps:
-1. Open https://gchq.github.io/CyberChef/
-2. Paste Base64 string
-3. Apply "From Base64"
-4. Output reveals the hidden password
+Using CyberChef
 
-### Decoding with Python
+Open: https://gchq.github.io/CyberChef/
 
-## Key learning
+Paste the string: cGFzc3dvcmQ6MTIzNDU2Nzg5MA==
 
-- Base64 is not encryption — just an encoding method  
-- Useful for identifying hidden data in steganography challenges  
-- Good practice for quick triage of suspicious encoded strings
+Add the From Base64 operation.
 
+The decoded output clearly shows the password in plain text.
 
-Run:
+Tools used
+
+CyberChef (web-based): Base64 decoding
+
+Key learning
+
+Understanding of basic steganography workflow when the payload is text-based and Base64-encoded.
